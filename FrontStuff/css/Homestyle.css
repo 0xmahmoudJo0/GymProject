@@ -1,0 +1,262 @@
+html {
+	scroll-behavior: smooth;
+}
+a {
+	color: white;
+	text-decoration: none;
+	transition: color .5s
+}
+a:hover, a:focus {
+	text-decoration: none;
+	color: white;
+
+}
+#mynavbar ul li a {
+	transition: background-color .5s, border-radius .8s;
+}
+#mynavbar ul li a:hover {
+	background-color: #23527c;
+}
+#mynavbar ul li a:focus {
+	background-color: #337ab7
+}
+body {
+	background-color: #002b36;
+	font-family: 'Frank Ruhl Libre', serif;
+	font-size: 14px;
+}
+nav .container ul {
+	display: flex;
+	align-items: center;
+}
+nav .container ul .btn-primary {
+	font-size: 13px;
+	margin-left: 3px;
+	min-width: 100px;
+	color: white;
+	padding: 5px;
+	position: relative; 
+}
+nav .container ul .btn-primary:hover {
+	border-radius: 14px;
+}
+
+nav .container ul .btn-primary span {
+	margin:0 10px 0 0;
+}
+nav .container ul li {
+	margin:2px 5px 0 5px;
+}
+nav .container span {
+	margin: 2px 0px 0px 10px;
+}
+nav .container .navbar-header span a {
+	transition: letter-spacing 1s, color 1s;
+	color:#337ab7 
+}
+nav .container .navbar-header span a:hover {
+ 	letter-spacing: 4px;
+	color: #23527c;
+}
+
+.carousel-caption {
+top:35%;
+}
+.carousel-caption  {
+	font-size: 4vw;
+}
+.carousel a {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+#join_btn {
+	display: block;
+	width:10vw;
+	margin: auto;
+	margin-top: 80px;
+	background-color: transparent;
+	color: white;
+	border:1px solid white;
+	border-left: none;
+	border-right: none;
+	padding: 5px;
+	font-size: 20px;
+	transition:border-color .5s ease-out, color .5s, width .5s ease-out;
+}
+#join_btn:hover {
+	border-color: #337ab7;
+	color: #337ab7;
+	width: 240px;
+}
+
+.carousel img {
+	width:100%;
+}
+
+main {
+	display: block;
+	width:100%;
+	background: linear-gradient(330deg, rgba(2,0,36,1) 0%, rgba(79,110,99,1) 100%, rgba(0,212,255,1) 100%);
+	color: white;
+	line-height: 28px;
+}
+.sport_type:first-child {
+	left: 100%;
+	transition: all 1s linear;
+}
+.sports .row {
+	display: flex;
+	align-items: flex-end;
+	margin:100px 0 100px 0;
+} 
+.sports .row div {
+	align-self: center;
+}
+#sport_panel {
+	padding:0;
+}
+.sport_type {
+	box-shadow: 1px 1px 10px #337ab7;
+	border:5px ridge #337ab7;
+	padding: 40px;
+	border-radius: 30px 2px 30px 2px;
+}
+.sport_type .underline {
+	height: 3px;
+	width: 10%;
+	background-color: silver;
+	margin:auto;
+	margin-bottom: 13px;
+}
+.sport_type h2 {
+	margin-bottom: 8px;
+	color: #337ab7;
+	text-align: center;
+}
+.sport_type p+div {
+	width:100%;
+	text-align: center;
+}
+.sports a {
+	color: #337ab7;
+	padding-top: 10px;
+ 	text-decoration: none;
+ 	font-size: 16px;
+ 	margin: auto;
+ 	font-style: italic;
+}
+.sports a:hover {
+	color: #23527c
+}
+.sports i {
+	margin-right: 5px;
+	font-size: 18px;
+}
+.sport_type p {
+	padding-top: 16px;
+	font-size: 16px
+}
+.sports img {
+	border-radius: 25px;
+	box-shadow: 2px 2px 5px silver
+}
+.container form {
+	display: flex;
+	margin-top: 80px;
+	justify-content: center;
+}
+.abilities {
+	font-size: 12px;
+	color: white;
+}
+
+.abilities h2,h2+p {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.abilities h1 {
+	font-size: 16px;
+}
+.abilities .row .col div {
+	margin-bottom: 30px; 
+	overflow: hidden;
+}
+.Abilities_icons {
+	color: #337ab7;
+	text-align: center;
+	width:80px;
+	font-size: 30px;
+	min-width: 70px;
+	margin-top: 10px;
+	padding-top: 30px;
+	float: left;
+} 
+#Regparag {
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	font-weight: 10px;
+}
+#Regparag a {
+	margin-left: 10px;
+	font-size: 18px;
+}
+#Regparag a:hover {
+	text-decoration: none;
+}
+.footer {
+	margin-top:15px;
+	background-color: #101010;
+	color: rgb(157, 157, 157);
+	width: 100%;
+} 
+.footer a {
+color: rgb(157, 157, 157);
+}
+.footer a:hover {
+	text-decoration: none;
+	color: #23527c;
+}
+.footer div {
+	margin-left: 25px;
+	text-align: center;
+}
+.footer h4 {
+	margin:20px 0 10px 0 ;
+	text-align: left;
+	font-weight: bold;
+	color: silver;
+}
+.footer ul  {
+	margin-left: 0px;
+	padding: 0px;
+text-align: left;
+}
+
+.footer .special {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.special a {
+	padding-left: 0px;
+}
+::selection {
+  background: #337ab7; 
+}
+input:focus::placeholder {
+    color: transparent;
+}
+.container {
+	margin-top: 0;
+} 
