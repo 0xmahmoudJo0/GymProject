@@ -128,10 +128,24 @@
 	<main>
 	<!-- sports description --> 
 	<div class="sports container" id="sports">
+		<script type="text/javascript">
+			const fancy_hover = function(i) {
+				let spans = document.getElementsByClassName('fancy_hover');
+				spans[i].style.left = "0";
+				spans[i].style.width = "100%"; 
+			}
+			const fancy_leave = function(i) {
+				let spans = document.getElementsByClassName('fancy_hover');
+				spans[i].style.left = "25%";
+				spans[i].style.width = "50%";
+			}
+		</script>
 		<div class="sport_type row">
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="sport_panel">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="sport_panel" onmouseover="fancy_hover(0)" onmouseleave="fancy_leave(0)">
 				<h2>Boxing</h2>
-				<div class="underline"></div>
+				<div class="underline">
+					<span class="fancy_hover"></span>
+				</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -150,9 +164,11 @@
 			<div class="col-md-6 col-lg-6">
 				<img class="img-responsive hidden-xs hidden-sm" src="sports/karate.jpg">
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="sport_panel">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="sport_panel" onmouseover="fancy_hover(1)" onmouseleave="fancy_leave(1)">
 				<h2>Karate</h2>
-				<div class="underline"></div>
+				<div class="underline">
+					<span class="fancy_hover"></span>
+				</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -164,10 +180,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="sport_type row">
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="sport_panel">
+		<div class="sport_type row" >
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="sport_panel" onmouseover="fancy_hover(2)" onmouseleave="fancy_leave(2)">
 				<h2>Parkour</h2>
-				<div class="underline"></div>
+				<div class="underline">
+					<span class="fancy_hover"></span>
+				</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -186,9 +204,11 @@
 			<div class="col-md-6 col-lg-6">
 				<img class="img-responsive hidden-xs hidden-sm" src="sports/gym.jpg">
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="sport_panel">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="sport_panel" onmouseover="fancy_hover(3)" onmouseleave="fancy_leave(3)">
 				<h2>Gym</h2>
-				<div class="underline"></div>
+				<div class="underline">
+					<span class="fancy_hover"></span>
+				</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
