@@ -64,7 +64,7 @@ h1 {
 	background-color: none;
 	box-shadow: none;
 }
-#password+p, #confirm_password+p {
+#password+p, #confirm_password+p,#national_error {
 	color: red;
 	margin-left: 10%;
 	display: none;
