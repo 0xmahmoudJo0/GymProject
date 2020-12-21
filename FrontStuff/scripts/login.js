@@ -35,15 +35,21 @@ function password_check(password) {
 
 email_check(input_email);
 password_check(input_password);
-addEventListener('click', function() {
-     var check_request = new XMLHttpRequest;
-    check_request.onreadystatechange = function() {
- 	if (this.readyState === 4 && this.status === 200) {
-        //code
- 	}
- }
- check_request.open("POST", "https://api.com", true);
- check_request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
- check_request.send("email=" + input_email + "&password=" + input_password);
-})
 
+submit_btn.addEventListener('click', function () {
+    const url = "http://localhost/GymProject-main/GymProject-main/routing/client.php/auth";
+    const data = {
+        email: input_email.value,
+        password: input_password.value
+    };
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data)
+    }).then(res =>     
+            res.json()
+    )
+    .then((data) => {
+        localStorage.setItem($data);
+      })        
+      .catch(e=>console.log(e));
+})
