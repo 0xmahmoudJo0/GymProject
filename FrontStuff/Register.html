@@ -21,13 +21,14 @@
 						<i class="fas fa-dumbbell"></i>
 						<h1>Member Login</h1>
 						<input type="text" name="username" class="form-control" placeholder="Name" autocomplete="off" id="name">
-
 						<input type="Email" name="email" class="form-control" placeholder="Email" autocomplete="off" id="email">
+						<input type="text" placeholder="Phone Number" autocomplete="on" class="form-control" id="phone">
 						<input type="text" name="national" class="form-control" placeholder="National ID" autocomplete="off" id="national">
+						<p id="national_error">Please Enter A Valid ID</p>
 						<input type="password" name="password" class="form-control" placeholder="Password" autocomplete="off" id="password">
-						<p id="password_error">Password can't be less than 8 chars</p>
+						<p id="password_error">Password Can't Be Less Than 8 Chars</p>
 						<input type="password" name="password" class="form-control" placeholder="Confirm Password" autocomplete="off" id="confirm_password">
-						<p id="confirm_error">Passwords are not identical</p>
+						<p id="confirm_error">Passwords Are Not Identical</p>
 						<div class="gender">
 						<p>Gender : </p>
 							<div class="radio-inline">
@@ -37,7 +38,7 @@
 							  <label><input type="radio" name="gender" id="female">Female</label>
 							</div>
 						</div>
-						<button class="btn btn-default form-control" >Register</button>
+						<button class="btn btn-default form-control" id="btn">Register</button>
 						
 				</div>
 			</div>
