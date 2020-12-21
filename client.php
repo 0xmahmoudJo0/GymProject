@@ -1,11 +1,12 @@
 <?php
-
+header("Access-Control-Allow-Origin: *");
     require "../ModelCrudRepository.php";
     require "../Entities/client.php";
     require "../utils/utility.php";
     require __DIR__ . '/../vendor/autoload.php';
 
     use \Firebase\JWT\JWT;
+
     $key = "example_key";
     $conn = new PDO("mysql:host=localhost;dbname=gym", 'root', "");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);    $method=$_SERVER["REQUEST_METHOD"];
@@ -14,6 +15,16 @@
     $post_functions=array(
         
     );
+    $get_functions=array();
+    $put_functions=array();
+
+    /////////////get////////////////
+    $get_functions["/client.php"]=function() use (&$model,&$key){
+        $id=$_GET["id"];
+        $client=$model->findOne($id);
+    };
+
+
     ////////////////////*/signup*/ ///////////////
         $post_functions["/client.php/signup"]=function() use (&$model,&$key){
             $request_body=json_decode(file_get_contents("php://input"));
@@ -63,11 +74,26 @@
             );
             $jwt =JWT::encode($payload,$key);
             http_response_code(200);
-            echo $jwt;
+            echo json_encode($jwt);
             return;
 
         };
 
-    $post_functions[$path]();
-
-    ?>
+        ////////////////////update////////////
+        $put_functions["/client"]=function() use(&$model,&$key){
+            $request_body=json_decode(file_get_contents("php://input"));
+            $client=new Client();
+            $client=$client->load_json($request_body);
+            $model->save($client);
+        };
+        switch($_SERVER['REQUEST_METHOD']
+        ){
+            case "GET":
+                $get_functions[$path]();
+                break;
+            case "POST":
+                $post_functions[$path]();
+                break;
+            
+        }
+            ?>
