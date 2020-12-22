@@ -129,9 +129,6 @@ class ModelCrudRepository
 
     private function bindStmtParams($params)
     {
-        echo"//////////////////////";
-        print_r($this->stmt->queryString);
-        echo "/////////";
         foreach ($params as $param => $value) {
             $this->stmt->bindParam(":" . $param, $params->$param);
         }
